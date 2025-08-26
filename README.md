@@ -1,5 +1,6 @@
 # Toll Plaza Locator API
 
+```
 A Java Spring Boot RESTful API to find toll plazas on the route between two Indian pincodes. The API dynamically filters toll plazas based on the route distance using adaptive geographical filtering, delivering precise results with robust error handling.
 
 ## Project Overview
@@ -124,23 +125,46 @@ mvn test
 
 ---
 
-## Folder Structure
+## Project Folder Structure
 
 ```
 Toll-Plaza-Locator/
+├── .mvn/                             # Maven wrapper files to run maven without install
 ├── src/
 │   ├── main/
-│   │   ├── java/com/example/tollplaza/      # Source code
-│   │   ├── resources/                        # CSV files & config
-│   ├── test/java/com/example/tollplaza/     # Unit tests
-├── images/
-│   └── screenshots/                          # API test proof images
-├── .gitignore
-├── pom.xml
-├── README.md
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── tollplaza/
+│   │   │               ├── controller/        # REST controllers handling API requests
+│   │   │               ├── dto/               # Data Transfer Objects for API
+│   │   │               ├── model/             # Data models/entities
+│   │   │               ├── service/           # Business logic services
+│   │   │               ├── util/              # Utility/helper classes (e.g., CSV loading, geo utils)
+│   │   │               └── TollPlazaLocatorApplication.java  # Main Spring Boot application class
+│   │   ├── resources/
+│   │   │   ├── indian_pincodes.csv            # Indian pincodes data file
+│   │   │   ├── toll_plaza_india.csv            # Toll plazas data file
+│   │   │   └── application.properties          # Spring Boot config properties
+│   ├── test/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── tollplaza/
+│   │   │               ├── controller/        # Controller tests (JUnit)
+│   │   │               ├── service/           # Service layer tests (JUnit)
+│   │   │               └── TollPlazaLocatorApplicationTests.java  # Integration test
+│   │   └── resources/                          # Test resource files (if any)
+├── images/                                    # Folder for screenshots & proof images
+│   └── screenshots/
+│       ├── working_request.png                 # Screenshot of successful API response
+│       ├── invalid_pincode_error.png           # Screenshot showing invalid pincode error
+│       └── same_pincode_error.png               # Screenshot showing same pincode error
+├── .gitignore                                 # Git ignore file
+├── mvnw, mvnw.cmd                             # Maven wrapper executables
+├── pom.xml                                    # Maven project descriptor
+└── README.md                                  # Project documentation
 ```
-
----
 
 ## Screenshots
 
@@ -177,7 +201,7 @@ Toll-Plaza-Locator/
 **Sekhar Sunkara**
 
 - GitHub: https://github.com/SekharSunkara6  
-- Email: [sekharsunkara2002@gmail.com]
+- Email: sekharsunkara2002@gmail.com
 - Portfolio: https://sekharsunkaraportfolio.netlify.app/
 
 ---
