@@ -1,6 +1,5 @@
 # Toll Plaza Locator API
 
-```
 A Java Spring Boot RESTful API to find toll plazas on the route between two Indian pincodes. The API dynamically filters toll plazas based on the route distance using adaptive geographical filtering, delivering precise results with robust error handling.
 
 ## Project Overview
