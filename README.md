@@ -2,6 +2,8 @@
 
 A Java Spring Boot RESTful API to find toll plazas on the route between two Indian pincodes. The API dynamically filters toll plazas based on the route distance using adaptive geographical filtering, delivering precise results with robust error handling.
 
+---
+
 ## Project Overview
 
 This project aims to provide a backend REST API that, given two Indian pincodes as source and destination, calculates the route distance and returns a filtered list of toll plazas located within an adaptive radius around the source location. The filtering radius scales dynamically based on the route distance, ensuring relevant toll plazas are returned without overwhelming results.
